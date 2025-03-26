@@ -12,7 +12,7 @@ export function Projects() {
   return (
     <section id="projects" className="py-16 px-10 md:py-24 bg-bg-primary">
       <div className="container">
-        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">My Projects</h2>
+        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-secondary">My Projects</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <ProjectCard
             title="CultureFit - Gym Management"
@@ -30,7 +30,7 @@ export function Projects() {
           />
           <ProjectCard
             title="Python Trivial Game"
-            description="A game in python terminal, with questions and answers."
+            description="A game in python terminal, with questions and answers. It is a project with POO concepts."
             image={trivial}
             tags={["Python"]}
             repoLink="https://github.com/WDJohanWD/proyecto_poo"
@@ -57,12 +57,12 @@ export function Projects() {
 
 function ProjectCard({ title, description, image, tags,  repoLink }) {
   return (
-    <Card className="overflow-hidden h-full flex flex-col">
+    <Card className="overflow-hidden h-full flex flex-col hover:-translate-y-3 hover:border-2 hover:border-secondary transition-transform duration-300 ease-in-out ">
       <div className="relative h-48 w-full">
         <img src={image} alt={title} className="object-cover w-full h-full" />
       </div>
       <CardHeader>
-        <CardTitle>{title}</CardTitle>
+        <CardTitle className="text-secondary">{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
       <CardContent>
@@ -78,8 +78,8 @@ function ProjectCard({ title, description, image, tags,  repoLink }) {
         <div className="flex gap-2">
           
           <Button size="sm" variant="outline">
-            <a href={repoLink} target="_blank" rel="noopener noreferrer" className="flex items-center">
-              <Github className="mr-2 h-4 w-4" />
+            <a href={repoLink} target="_blank" rel="noopener noreferrer" className="flex items-center text-secondary">
+              <Github className="mr-2 h-4 w-4 text-secondary" />
               Code
             </a>
           </Button>

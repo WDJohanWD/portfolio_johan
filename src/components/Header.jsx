@@ -8,7 +8,7 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-3">
+    <header className="sticky top-0 z-40 w-full border-b border-secondary bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-3 text-secondary">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <Link to="/" className="font-bold text-xl text-primary">
@@ -18,18 +18,18 @@ export function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-6">
-          <Link to="#about" className="text-sm font-medium hover:text-primary transition-colors">
+          <a href="#about" className="text-sm font-medium hover:text-primary transition-colors">
             About
-          </Link>
-          <Link to="#skills" className="text-sm font-medium hover:text-primary transition-colors">
+          </a>
+          <a href="#skills" className="text-sm font-medium hover:text-primary transition-colors">
             Skills
-          </Link>
-          <Link to="#projects" className="text-sm font-medium hover:text-primary transition-colors">
+          </a>
+          <a href="#projects" className="text-sm font-medium hover:text-primary transition-colors">
             Projects
-          </Link>
-          <Link to="#contact" className="text-sm font-medium hover:text-primary transition-colors">
+          </a>
+          <a href="#contact" className="text-sm font-medium hover:text-primary transition-colors">
             Contact
-          </Link>
+          </a>
         </nav>
 
         {/* Mobile Navigation Toggle */}

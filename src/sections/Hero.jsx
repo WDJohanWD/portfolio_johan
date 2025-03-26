@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 
 export function Hero() {
   return (
-    <section className="relative pb-16 pt-24 md:pt-32 md:pb-24">
+    <section className="h-175 relative  pt-24 md:pt-32  ">
       <div className="container flex flex-col items-center text-center">
         <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
           <span className="block">Hi, I'm </span>

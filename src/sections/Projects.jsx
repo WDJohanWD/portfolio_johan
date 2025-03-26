@@ -6,6 +6,7 @@ import culturefit from "../assets/culturefit.png";
 import smartsphere from "../assets/smartsphere.png";
 import trivial from "../assets/Trivial.png";
 import shop from "../assets/Shop.png"
+import dao from "../assets/DAO.png"
 
 export function Projects() {
   return (
@@ -18,7 +19,6 @@ export function Projects() {
             description="A gym management platform with subscriptions, online content, and appointment scheduling."
             image={culturefit}
             tags={["Spring Boot", "React", "MySQL", "Docker", "Tailwind CSS"]}
-            demoLink="https://culturefit.com"
             repoLink="https://github.com/WDJohanWD/CultureFit"
           />
           <ProjectCard
@@ -26,7 +26,6 @@ export function Projects() {
             description="An online store with product listings, cart functionality, and secure checkout."
             image={smartsphere}
             tags={["React", "Tailwind CSS", "JSON Server"]}
-            demoLink="https://example.com"
             repoLink="https://github.com/WDJohanWD/proyectoreact"
           />
           <ProjectCard
@@ -41,8 +40,14 @@ export function Projects() {
             description="A task manager with user authentication, task creation, cart etc."
             image={shop}
             tags={["Vue.js", "Express", "Pinia", "MongoDB", "Bootstrap"]}
-            demoLink="https://example.com"
-            repoLink="https://github.com/WDJohanWD/task-manager"
+            repoLink="https://github.com/WDJohanWD/vue_project"
+          />
+          <ProjectCard
+            title="Hogwarts - BD access"
+            description="A little project to access a BD with students and houses of Hogwarts."
+            image={dao}
+            tags={["Java", "MySQL"]}
+            repoLink="https://github.com/WDJohanWD/Hogwarts"
           />
         </div>
       </div>
@@ -50,7 +55,7 @@ export function Projects() {
   );
 }
 
-function ProjectCard({ title, description, image, tags, demoLink, repoLink }) {
+function ProjectCard({ title, description, image, tags,  repoLink }) {
   return (
     <Card className="overflow-hidden h-full flex flex-col">
       <div className="relative h-48 w-full">
@@ -71,12 +76,7 @@ function ProjectCard({ title, description, image, tags, demoLink, repoLink }) {
       </CardContent>
       <CardFooter className="mt-auto">
         <div className="flex gap-2">
-          <Button size="sm" variant="outline">
-            <a href={demoLink} target="_blank" rel="noopener noreferrer" className="flex items-center">
-              <ExternalLink className="mr-2 h-4 w-4" />
-              Demo
-            </a>
-          </Button>
+          
           <Button size="sm" variant="outline">
             <a href={repoLink} target="_blank" rel="noopener noreferrer" className="flex items-center">
               <Github className="mr-2 h-4 w-4" />

@@ -1,15 +1,20 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
 import  { Header }  from './components/Header'
-import { Home } from './sections/Home'
+import { Hero } from './sections/Hero'
 import { Footer } from './components/Footer'
-
+import { About } from './sections/About'
 function Layout(){
   return(
     <>
       <Header/>
       <Routes>
-        <Route path="/" element={<Home/>}/>
+        <Route path="/" element={
+          <>
+            <Hero/>
+            <About/>
+          </>
+          }/>
       </Routes>
       <Footer/>
     </>

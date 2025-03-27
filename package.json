@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://WDJohanWD.github.io/portfolio-johan",
+  "homepage": "https://WDJohanWD.github.io/portfolio_johan",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

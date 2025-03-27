@@ -49,7 +49,7 @@ export function Skills() {
 
 function SkillCard({ icon, title, skills }) {
     return (
-        <Card className="h-full hover:-translate-y-3 transition-transform duration-300 ease-in-out hover:border-2 hover:border-primary">
+        <Card className="h-full hover:-translate-y-3 transition-transform duration-300 ease-in-out hover:border-2 hover:border-secondary">
             <CardContent className="p-6 flex flex-col items-center text-center">
                 <div className="mb-4">{icon}</div>
                 <h3 className="text-xl font-bold mb-4">{title}</h3>

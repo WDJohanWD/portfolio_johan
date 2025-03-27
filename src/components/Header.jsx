@@ -8,26 +8,26 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-secondary bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-3 text-secondary">
+    <header  className="sticky top-0 z-40 w-full border-b border-secondary bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-3 text-secondary ">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
-          <Link to="/" className="font-bold text-xl text-secondary hover:text-primary transition-colors">
+          <Link to="/" className="font-bold text-xl text-secondary transition-colors">
             Johan Aponte
           </Link>
         </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-6">
-          <a href="#about" className="text-sm font-medium hover:text-primary transition-colors">
+          <a href="#about" className="text-sm font-medium text-primary transition-colors">
             About
           </a>
-          <a href="#skills" className="text-sm font-medium hover:text-primary transition-colors">
+          <a href="#skills" className="text-sm font-medium text-primary transition-colors">
             Skills
           </a>
-          <a href="#projects" className="text-sm font-medium hover:text-primary transition-colors">
+          <a href="#projects" className="text-sm font-medium text-primary transition-colors">
             Projects
           </a>
-          <a href="#contact" className="text-sm font-medium hover:text-primary transition-colors">
+          <a href="#contact" className="text-sm font-medium text-primary transition-colors">
             Contact
           </a>
         </nav>
@@ -44,28 +44,28 @@ export function Header() {
             <nav className="container flex flex-col py-4">
               <Link
                 to="#about"
-                className="py-2 text-sm font-medium hover:text-primary transition-colors"
+                className="py-2 text-sm font-medium text-primary transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
               </Link>
               <Link
                 to="#skills"
-                className="py-2 text-sm font-medium hover:text-primary transition-colors"
+                className="py-2 text-sm font-medium text-primary transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Skills
               </Link>
               <Link
                 to="#projects"
-                className="py-2 text-sm font-medium hover:text-primary transition-colors"
+                className="py-2 text-sm font-medium text-primary transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Projects
               </Link>
               <Link
                 to="#contact"
-                className="py-2 text-sm font-medium hover:text-primary transition-colors"
+                className="py-2 text-sm font-medium text-primary transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact

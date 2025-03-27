@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 
 export function Hero() {
   return (
-    <section className="h-175 relative  pt-24 md:pt-32  ">
+    <section  className="h-177 relative  pt-24 md:pt-32  ">
       <div className="container flex flex-col items-center text-center">
         <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
           <span className="block text-secondary">Hi, I'm </span>
@@ -16,7 +16,7 @@ export function Hero() {
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <Button aschild="true" className="hover:bg-secondary/80 hover:text-bg-primary">
             <a href="#projects">
-              <p>My Work <ArrowRight className="ml-2 h-4 w-4" /></p>
+              My Work <ArrowRight className="ml-2 h-4 w-4" />
             </a>
           </Button>
           <Button variant="outline" aschild="true" className="hover:bg-secondary/80 hover:text-bg-primary">

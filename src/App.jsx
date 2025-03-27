@@ -10,10 +10,10 @@ import { Projects } from './sections/Projects'
 function Layout() {
   return (
     <>
-      <div className=''>
+      <div id='hero' className=''>
         <Header />
         <Routes>
-          <Route path="/portfolio-johan" element={
+          <Route path="/" element={
             <>
               <Hero />
               <About />

@@ -11,7 +11,7 @@ export function Header() {
     <header className="sticky top-0 z-40 w-full border-b border-secondary bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-3 text-secondary">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
-          <Link to="/" className="font-bold text-xl text-primary">
+          <Link to="/" className="font-bold text-xl text-secondary hover:text-primary transition-colors">
             Johan Aponte
           </Link>
         </div>

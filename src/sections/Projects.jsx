@@ -2,11 +2,11 @@ import React from "react";
 import { Button } from "../components/Button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../components/Card";
 import { ExternalLink, Github } from "lucide-react";
-import culturefit from "../assets/culturefit.png";
-import smartsphere from "../assets/smartsphere.png";
-import trivial from "../assets/Trivial.png";
-import shop from "../assets/Shop.png"
-import dao from "../assets/DAO.png"
+import culturefit from "../assets/culturefit.webp";
+import smartsphere from "../assets/smartsphere.webp";
+import trivial from "../assets/Trivial.webp";
+import shop from "../assets/Shop.webp";
+import dao from "../assets/DAO.webp";
 
 export function Projects() {
   return (
@@ -29,10 +29,10 @@ export function Projects() {
             repoLink="https://github.com/WDJohanWD/proyectoreact"
           />
           <ProjectCard
-            title="Python Trivial Game"
-            description="A game in python terminal, with questions and answers. It is a project with POO concepts."
+            title="Trivia culture game"
+            description="A game in python terminal, with questions and answers. It is a project with POO concepts. And json to save the questions."
             image={trivial}
-            tags={["Python"]}
+            tags={["Python", "JSON"]}
             repoLink="https://github.com/WDJohanWD/proyecto_poo"
           />
           <ProjectCard
@@ -58,7 +58,7 @@ export function Projects() {
 function ProjectCard({ title, description, image, tags,  repoLink }) {
   return (
     <Card className="overflow-hidden h-full flex flex-col hover:-translate-y-3 hover:border-2 hover:border-secondary transition-transform duration-300 ease-in-out ">
-      <div className="relative h-48 w-full">
+      <div className="relative h-60 w-full">
         <img src={image} alt={title} className="object-cover w-full h-full" />
       </div>
       <CardHeader>

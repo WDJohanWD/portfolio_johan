@@ -14,29 +14,29 @@ export function Hero() {
           A passionate full-stack developer specializing in building exceptional digital experiences.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
-          <Button asChild className="hover:bg-secondary/80 hover:text-bg-primary">
+          <Button aschild="true" className="hover:bg-secondary/80 hover:text-bg-primary">
             <a href="#projects">
               <p>My Work <ArrowRight className="ml-2 h-4 w-4" /></p>
             </a>
           </Button>
-          <Button variant="outline" asChild className="hover:bg-secondary/80 hover:text-bg-primary">
+          <Button variant="outline" aschild="true" className="hover:bg-secondary/80 hover:text-bg-primary">
             <Link to="#contact">Contact Me</Link>
           </Button>
         </div>
         <div className="mt-8 flex items-center justify-center gap-4">
-          <Button variant="ghost" size="icon" asChild>
+          <Button variant="ghost" size="icon" aschild="true">
             <Link to="https://github.com/wdjohanwd" target="_blank" rel="noopener noreferrer">
               <Github className="h-5 w-5 text-secondary" />
               <span className="sr-only">GitHub</span>
             </Link>
           </Button>
-          <Button variant="ghost" size="icon" asChild>
+          <Button variant="ghost" size="icon" aschild="true">
             <Link to="https://linkedin.com/in/johan-aponte-6b74a8329" target="_blank" rel="noopener noreferrer">
               <Linkedin className="h-5 w-5 text-secondary" />
               <span className="sr-only">LinkedIn</span>
             </Link>
           </Button>
-          <Button variant="ghost" size="icon" asChild>
+          <Button variant="ghost" size="icon" aschild="true">
             <Link to="mailto:wdjohanwd@gmail.com">
               <Mail className="h-5 w-5 text-secondary" />
               <span className="sr-only">Email</span>

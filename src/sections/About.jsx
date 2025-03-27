@@ -1,5 +1,5 @@
 import { Card, CardContent } from "../components/Card"
-import profileImage from "../assets/f1.png";
+import profileImage from "../assets/f1.webp";
 
 export function About() {
   return (

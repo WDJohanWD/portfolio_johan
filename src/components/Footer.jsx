@@ -10,20 +10,20 @@ export function Footer() {
           <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} Johan Fernando Aponte Valencia. All rights reserved.</p>
         </div>
         <div className="flex items-center gap-4">
-          <Button variant="ghost" size="icon" asChild>
+          <Button variant="ghost" size="icon" aschild="true">
             <Link to="https://github.com/wdjohanwd" target="_blank" rel="noopener noreferrer">
               <Github className="h-5 w-5" />
               <span className="sr-only">GitHub</span>
             </Link>
           </Button>
-          <Button variant="ghost" size="icon" asChild>
+          <Button variant="ghost" size="icon" aschild="true">
             <Link to="https://www.linkedin.com/in/johan-aponte-6b74a8329/" target="_blank" rel="noopener noreferrer">
               <Linkedin className="h-5 w-5" />
               <span className="sr-only">LinkedIn</span>
             </Link>
           </Button>
           
-          <Button variant="ghost" size="icon" asChild>
+          <Button variant="ghost" size="icon" aschild="true">
             <Link to="mailto:wdjohanwd@gmail.com">
               <Mail className="h-5 w-5" />
               <span className="sr-only">Email</span>

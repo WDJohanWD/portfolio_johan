@@ -13,7 +13,7 @@ function Layout() {
       <div className=''>
         <Header />
         <Routes>
-          <Route path="/" element={
+          <Route path="/portfolio-johan" element={
             <>
               <Hero />
               <About />

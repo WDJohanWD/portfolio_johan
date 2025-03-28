@@ -57,7 +57,7 @@ export function Projects() {
 
 function ProjectCard({ title, description, image, tags,  repoLink }) {
   return (
-    <Card className="overflow-hidden h-full flex flex-col hover:-translate-y-3 hover:border-2 hover:border-primary transition-transform duration-300 ease-in-out ">
+    <Card className="overflow-hidden h-full flex flex-col hover:-translate-y-3 hover:border-2 hover:border-secondary transition-transform duration-300 ease-in-out ">
       <div className="relative h-60 w-full">
         <img src={image} alt={title} className="object-cover w-full h-full" />
       </div>

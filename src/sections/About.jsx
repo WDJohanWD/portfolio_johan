@@ -13,6 +13,7 @@ export function About() {
           <div className="flex justify-center">
             <div className="relative w-52 h-52 md:w-80 md:h-80 min-w-[200px] min-h-[200px] rounded-full overflow-hidden border-4 border-primary">
               <img
+                style={{"rotate":"5deg"}}
                 src={profileImage}
                 alt="Profile"
                 width={320}

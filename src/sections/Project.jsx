@@ -1,37 +1,36 @@
-import { useParams } from "react-router-dom";
 import { useState } from "react";
 import { Calendar, Code, Github, Globe, Layers, User } from "lucide-react";
 import { Badge } from "../components/Badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/Tabs";
 import { Button } from "../components/Button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../components/Card";
+import { useParams } from "react-router-dom";
 
 export function Project() {
     const { id } = useParams();
 
-    // Definir imágenes como un objeto directamente
     const images = {
         "culturefit": [
             "/portfolio_johan/culturefit/culturefit.webp",
-            "../assets/cultureFit/culturefit.webp",
-            "../assets/cultureFit/culturefit2.webp",
-            "../assets/cultureFit/culturefit3.webp",
+            "/portfolio_johan/culturefit/culturefit1.webp",
+            "/portfolio_johan/culturefit/culturefit2.webp",
+            "/portfolio_johan/culturefit/culturefit3.webp",
         ]
     };
 
     return (
-        <div className="bg-bg-primary">
+        <div className="">
             {id === "CULTUREFIT" && (
                 <ProjectDetails
                     title="CultureFit"
-                    description="Gym"
+                    description="A gym management platform with subscriptions, online content, and appointment scheduling."
                     images={images["culturefit"]}
                     liveUrl=""
                     repoUrl="https://github.com/WDJohanWD/CultureFit"
                     date="building"
                     role="Backend developer, Project manager, Optimization"
                     technologies={["Spring Boot", "React", "MySQL", "Docker", "Tailwind CSS"]}
-                    longDescription="Es una aplicación realizada por tres personas, donde nos fuimos dividiendo el trabajo por 'featers'. Mi parte sobretodo fue backend, administración de tareas, optimización de la aplicación y algunos componentes de frontend. La aplicación es un gimnasio, con todas las características, como suscripciones, contenido online, reservas de citas, etc. La aplicación está hecha con Spring Boot, React, MySQL y Docker. La aplicación está en construcción, pero ya tiene una buena parte de la funcionalidad."
+                    longDescription="This application was developed by a team of three, with each member focusing on different features. My primary contributions were backend development, task management, application optimization, and some frontend components. The platform is designed for gym management, offering key features such as subscriptions, online content, appointment scheduling, and more. Built with Spring Boot, React, MySQL, and Docker, the application is still under development but already has a substantial portion of its core functionality implemented."
                     features={["User authentication", "Subscription management", "Appointment scheduling", "Online content"]}
                     challenges="Integrating the backend with the frontend, ensuring smooth communication between them."
                     solutions="Utilized RESTful APIs for seamless data exchange and implemented JWT for secure authentication."
@@ -41,34 +40,43 @@ export function Project() {
     );
 }
 
+
 export function ProjectDetails({
-    title, description, images, liveUrl, repoUrl, date, role, technologies, longDescription, features, challenges, solutions
+    title,
+    description,
+    images,
+    liveUrl,
+    repoUrl,
+    date,
+    role,
+    technologies,
+    longDescription,
+    features,
+    challenges,
+    solutions,
 }) {
     const [currentImage, setCurrentImage] = useState(0);
 
     return (
-        <Card className="overflow-hidden border-none shadow-lg bg-bg-primary">
+        <Card className="mx-30 my-5">
             <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] bg-muted">
                 <img
                     src={images[currentImage] || "/placeholder.svg"}
                     alt={`${title} screenshot ${currentImage + 1}`}
-                    className="object-cover w-full h-full" // Asegúrate de que se cubra todo el contenedor
+                    className="object-cover w-full h-full"
                 />
-
-                {/* Botones de navegación si hay varias imágenes */}
                 {images.length > 1 && (
                     <div className="absolute inset-0 flex items-center justify-between p-4">
                         <Button
+
                             variant="secondary"
                             size="icon"
-                            className="rounded-full opacity-80 hover:opacity-100"
+                            className="bg-primary rounded-full opacity-80 hover:opacity-100"
                             onClick={() =>
-                                setCurrentImage(
-                                    (prev) => (prev === 0 ? images.length - 1 : prev - 1)
-                                )
+                                setCurrentImage((prev) => (prev === 0 ? images.length - 1 : prev - 1))
                             }
                         >
-                            <span className="sr-only">Previous</span>
+                            <span className="sr-only ">Previous</span>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="24"
@@ -87,11 +95,9 @@ export function ProjectDetails({
                         <Button
                             variant="secondary"
                             size="icon"
-                            className="rounded-full opacity-80 hover:opacity-100"
+                            className="bg-primary rounded-full opacity-80 hover:opacity-100"
                             onClick={() =>
-                                setCurrentImage(
-                                    (prev) => (prev === images.length - 1 ? 0 : prev + 1)
-                                )
+                                setCurrentImage((prev) => (prev === images.length - 1 ? 0 : prev + 1))
                             }
                         >
                             <span className="sr-only">Next</span>
@@ -113,14 +119,13 @@ export function ProjectDetails({
                     </div>
                 )}
 
-                {/* Indicadores de imagen */}
+
                 {images.length > 1 && (
                     <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
                         {images.map((_, index) => (
                             <button
                                 key={index}
-                                className={`w-2.5 h-2.5 rounded-full ${currentImage === index ? "bg-primary" : "bg-primary/30"
-                                    }`}
+                                className={`w-2.5 h-2.5 rounded-full ${currentImage === index ? "bg-primary" : "bg-primary/30"}`}
                                 onClick={() => setCurrentImage(index)}
                             >
                                 <span className="sr-only">Image {index + 1}</span>
@@ -130,10 +135,11 @@ export function ProjectDetails({
                 )}
             </div>
 
-            <CardContent className="p-6 md:p-8 bg-bg-primary" >
+
+            <CardContent className="p-6 md:p-8 bg-bg-primary">
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
                     <div>
-                        <h2 className="text-2xl md:text-3xl font-bold mb-2">{title}</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold mb-2 text-secondary">{title}</h2>
                         <p className="text-muted-foreground">{description}</p>
                     </div>
                     <div className="flex flex-wrap gap-2 md:justify-end">
@@ -213,10 +219,14 @@ export function ProjectDetails({
                         </ul>
                     </TabsContent>
                     <TabsContent value="challenges" className="pt-6">
+                        <h3 className="text-xl font-bold text-primary">Challenges</h3>
                         {challenges && <p className="mb-6 text-muted-foreground">{challenges}</p>}
+                        <h3 className="text-xl font-bold text-primary">Solutions</h3>
                         {solutions && <p className="text-muted-foreground">{solutions}</p>}
                     </TabsContent>
                 </Tabs>
+
+
             </CardContent>
         </Card>
     );

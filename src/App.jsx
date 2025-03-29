@@ -6,7 +6,7 @@ import { Footer } from './components/Footer'
 import { About } from './sections/About'
 import { Skills } from './sections/Skills'
 import { Projects } from './sections/Projects'
-
+import { Project } from './sections/Project'
 function Layout() {
   return (
     <>
@@ -21,6 +21,7 @@ function Layout() {
               <Projects/>
             </> 
           } />
+          <Route path="/portfolio_johan/project/:id" element={<Project/>}/>
         </Routes>
         <Footer />
       </div>

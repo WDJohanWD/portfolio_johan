@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Button } from "../components/Button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../components/Card";
-import { ExternalLink, Github } from "lucide-react";
+import { Github } from "lucide-react";
 import culturefit from "../assets/culturefit.webp";
 import smartsphere from "../assets/smartsphere.webp";
 import trivial from "../assets/Trivial.webp";
@@ -20,6 +21,8 @@ export function Projects() {
             image={culturefit}
             tags={["Spring Boot", "React", "MySQL", "Docker", "Tailwind CSS"]}
             repoLink="https://github.com/WDJohanWD/CultureFit"
+            name="CULTUREFIT"
+
           />
           <ProjectCard
             title="SmartSphere - Tecnology shop and admin management"
@@ -27,6 +30,8 @@ export function Projects() {
             image={smartsphere}
             tags={["React", "Tailwind CSS", "JSON Server"]}
             repoLink="https://github.com/WDJohanWD/proyectoreact"
+            name="SMARTSPHERE"
+
           />
           <ProjectCard
             title="Trivia culture game"
@@ -34,13 +39,18 @@ export function Projects() {
             image={trivial}
             tags={["Python", "JSON"]}
             repoLink="https://github.com/WDJohanWD/proyecto_poo"
+            name="TRIVIAL"
+
           />
+
           <ProjectCard
             title="Shop - Task Manager"
             description="A task manager with user authentication, task creation, cart etc."
             image={shop}
             tags={["Vue.js", "Express", "Pinia", "MongoDB", "Bootstrap"]}
             repoLink="https://github.com/WDJohanWD/vue_project"
+            name="VUE"
+
           />
           <ProjectCard
             title="Hogwarts - BD access"
@@ -48,16 +58,19 @@ export function Projects() {
             image={dao}
             tags={["Java", "MySQL"]}
             repoLink="https://github.com/WDJohanWD/Hogwarts"
-          />
+            name="DAO"
+            />
         </div>
       </div>
     </section>
   );
 }
 
-function ProjectCard({ title, description, image, tags,  repoLink }) {
+function ProjectCard({ title, description, image, tags,  repoLink, name }) {
+  const URL = "/portfolio_johan/project/" + name;
   return (
     <Card className="overflow-hidden h-full flex flex-col hover:-translate-y-3 hover:border-2 hover:border-secondary transition-transform duration-300 ease-in-out ">
+      <Link to={URL}> 
       <div className="relative h-60 w-full">
         <img src={image} alt={title} className="object-cover w-full h-full" />
       </div>
@@ -74,6 +87,7 @@ function ProjectCard({ title, description, image, tags,  repoLink }) {
           ))}
         </div>
       </CardContent>
+      </Link>
       <CardFooter className="mt-auto">
         <div className="flex gap-2">
           

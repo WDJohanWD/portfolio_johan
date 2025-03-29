@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.16",
+    "clsx": "^2.1.1",
     "lucide-react": "^0.484.0",
     "portfolio-johan": "file:",
     "react": "^19.0.0",

@@ -4,7 +4,7 @@ import {Link} from "react-router-dom"
 
 export function Footer() {
   return (
-    <footer className="border-t py-8 md:py-12 text-secondary ">
+    <footer className="border-t py-8 md:py-12 text-secondary p-2">
       <div className="container flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0 font-bold">
         <div className="text-center md:text-left">
           <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} Johan Fernando Aponte Valencia. All rights reserved.</p>

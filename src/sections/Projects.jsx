@@ -12,7 +12,7 @@ export function Projects() {
   return (
     <section id="projects" className="py-16 px-10 md:py-24 bg-bg-primary">
       <div className="container">
-        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-secondary">My Projects</h2>
+        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-primary">Projects</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <ProjectCard
             title="CultureFit - Gym Management"

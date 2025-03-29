@@ -1,6 +1,6 @@
 import { Button } from "../components/Button";
-import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
-
+import {  Github, Linkedin, Mail } from "lucide-react";
+import ScrollDown from "../components/ScrollDownArrow";
 export function Hero() {
   return (
     <section className="min-h-screen flex flex-col justify-center items-center text-center py-24">
@@ -47,6 +47,8 @@ export function Hero() {
           </Button>
             </a>
         </div>
+        <ScrollDown targetId="about" />
+
       </div>
     </section>
   );

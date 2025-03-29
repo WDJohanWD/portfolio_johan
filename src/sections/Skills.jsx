@@ -7,7 +7,7 @@ export function Skills() {
         <section id="skills" className="py-16 md:py-24 mb-20 px-10">
             <div className="container">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-secondary">
-                    My Skills
+                    Skills
                 </h2>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-y-8">
                     <SkillCard
@@ -48,7 +48,7 @@ export function Skills() {
 
 function SkillCard({ icon, title, skills }) {
     return (
-        <Card className="h-full min-h-[200px] hover:-translate-y-3 transition-transform duration-300 ease-in-out hover:border-2 hover:border-primary">
+        <Card className="h-full min-h-[200px] ">
             <CardContent className="p-6 flex flex-col items-center text-center justify-between">
                 <div className="mb-4">{icon}</div>
                 <h3 className="text-xl font-bold mb-4">{title}</h3>

@@ -5,7 +5,7 @@ export function About() {
   return (
     <section id="about" className="py-16 px-10 md:py-24 bg-bg-primary">
       <div className="container">
-        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-secondary">
+        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-primary">
           About Me
         </h2>
         <div className="grid md:grid-cols-2 gap-8 items-center">

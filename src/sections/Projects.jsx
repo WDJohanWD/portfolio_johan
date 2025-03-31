@@ -26,7 +26,7 @@ export function Projects() {
           />
           <ProjectCard
             title="SmartSphere - Tecnology shop and admin management"
-            description="An online store with product listings, cart functionality, and secure checkout."
+            description="An e-commerce platform for technology products, featuring product listings, cart functionality, and secure checkout."
             image={smartsphere}
             tags={["React", "Tailwind CSS", "JSON Server"]}
             repoLink="https://github.com/WDJohanWD/proyectoreact"

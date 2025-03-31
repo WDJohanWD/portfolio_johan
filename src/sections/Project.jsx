@@ -14,7 +14,13 @@ export function Project() {
             "/portfolio_johan/culturefit/culturefit.webp",
             "/portfolio_johan/culturefit/culturefit1.webp",
             "/portfolio_johan/culturefit/culturefit2.webp",
-            "/portfolio_johan/culturefit/culturefit3.webp",
+            "/portfolio_johan/culturefit/culturefit3.webp"
+        ],
+        "smartsphere":[
+            "/portfolio_johan/smartsphere/smartsphere.webp",
+            "/portfolio_johan/smartsphere/smartsphere1.webp",
+            "/portfolio_johan/smartsphere/smartsphere2.webp",
+            "/portfolio_johan/smartsphere/smartsphere3.webp"
         ]
     };
 
@@ -27,13 +33,30 @@ export function Project() {
                     images={images["culturefit"]}
                     liveUrl=""
                     repoUrl="https://github.com/WDJohanWD/CultureFit"
-                    date="building"
-                    role="Backend developer, Project manager, Optimization"
+                    date="Ongoing"
+                    role="Backend Developer, Project Manager, Optimization Specialist"
                     technologies={["Spring Boot", "React", "MySQL", "Docker", "Tailwind CSS"]}
                     longDescription="This application was developed by a team of three, with each member focusing on different features. My primary contributions were backend development, task management, application optimization, and some frontend components. The platform is designed for gym management, offering key features such as subscriptions, online content, appointment scheduling, and more. Built with Spring Boot, React, MySQL, and Docker, the application is still under development but already has a substantial portion of its core functionality implemented."
-                    features={["User authentication", "Subscription management", "Appointment scheduling", "Online content"]}
-                    challenges="Integrating the backend with the frontend, ensuring smooth communication between them."
-                    solutions="Utilized RESTful APIs for seamless data exchange and implemented JWT for secure authentication."
+                    features={["User authentication", "Subscription management", "Appointment scheduling", "Online content", "Roles"]}
+                    challenges="Managing different subscription plans with restricted access, ensuring secure online content distribution, and synchronizing the appointment system with professional availability."
+                    solutions="Implemented JWT-based access control for role-based restrictions, secured online content with streaming protection, and built an event-driven scheduling system to prevent double bookings."
+                />
+            )}
+
+            {id === "SMARTSPHERE" && (
+                <ProjectDetails
+                    title="SmartSphere"
+                    description="An e-commerce platform for technology products, featuring product listings, cart functionality, and secure checkout."
+                    images={images["smartsphere"]}
+                    liveUrl=""
+                    repoUrl="https://github.com/WDJohanWD/proyectoreact"
+                    date="2025-23-02"
+                    role="Full-Stack Developer"
+                    technologies={["React", "Tailwind CSS"]}
+                    longDescription="This application was developed by Johan Fernando Aponte Valencia. It is an online store specializing in technology products, offering a complete shopping experience. The platform includes essential e-commerce functionalities such as product listing, shopping cart, secure checkout, and an admin dashboard for managing users and products. The application is built with React and Tailwind CSS and continues to be actively developed."
+                    features={["User authentication", "Product listing", "Cart functionality", "Secure checkout", "Admin dashboard"]}
+                    challenges="Ensuring persistent cart functionality,  and maintaining real-time inventory management."
+                    solutions="Implemented JSON-SERVER to persist cart data and developed a stock control system that locks items in the cart until checkout is completed."
                 />
             )}
         </div>
@@ -58,7 +81,7 @@ export function ProjectDetails({
     const [currentImage, setCurrentImage] = useState(0);
 
     return (
-        <Card className="mx-30 my-5">
+        <Card className="mx-35 my-5">
             <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] bg-muted">
                 <img
                     src={images[currentImage] || "/placeholder.svg"}

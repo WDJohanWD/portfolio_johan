@@ -11,8 +11,8 @@ import dao from "../assets/DAO.webp";
 
 export function Projects() {
   return (
-    <section id="projects" className="py-16 px-10 md:py-24 bg-bg-primary">
-      <div className="container">
+    <section id="projects" className="py-16 px-4 md:py-24 bg-bg-primary">
+      <div className="container mx-auto max-w-full">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-primary">Projects</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <ProjectCard
@@ -59,38 +59,38 @@ export function Projects() {
             tags={["Java", "MySQL"]}
             repoLink="https://github.com/WDJohanWD/Hogwarts"
             name="DAO"
-            />
+          />
         </div>
       </div>
     </section>
   );
 }
 
-function ProjectCard({ title, description, image, tags,  repoLink, name }) {
+function ProjectCard({ title, description, image, tags, repoLink, name }) {
   const URL = "/portfolio_johan/project/" + name;
   return (
     <Card className="overflow-hidden h-full flex flex-col hover:-translate-y-3 hover:border-2 hover:border-secondary transition-transform duration-300 ease-in-out ">
-      <Link to={URL}> 
-      <div className="relative h-60 w-full">
-        <img src={image} alt={title} className="object-cover w-full h-full" />
-      </div>
-      <CardHeader>
-        <CardTitle className="text-secondary">{title}</CardTitle>
-        <CardDescription>{description}</CardDescription>
-      </CardHeader>
-      <CardContent>
-        <div className="flex flex-wrap gap-2">
-          {tags.map((tag, index) => (
-            <span key={index} className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full">
-              {tag}
-            </span>
-          ))}
+      <Link to={URL}>
+        <div className="relative h-60 w-full">
+          <img src={image || "/placeholder.svg"} alt={title} className="object-cover w-full h-full" />
         </div>
-      </CardContent>
+        <CardHeader>
+          <CardTitle className="text-secondary">{title}</CardTitle>
+          <CardDescription>{description}</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="flex flex-wrap gap-2">
+            {tags.map((tag, index) => (
+              <span key={index} className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </CardContent>
       </Link>
       <CardFooter className="mt-auto">
         <div className="flex gap-2">
-          
+
           <Button size="sm" variant="outline">
             <a href={repoLink} target="_blank" rel="noopener noreferrer" className="flex items-center text-secondary">
               <Github className="mr-2 h-4 w-4 text-secondary" />

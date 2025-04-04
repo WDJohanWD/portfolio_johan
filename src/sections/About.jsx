@@ -3,8 +3,8 @@ import profileImage from "../assets/f2.webp";
 
 export function About() {
   return (
-    <section id="about" className="py-16 px-10 md:py-24 bg-bg-primary">
-      <div className="container">
+    <section id="about" className="py-16 px-4 md:py-24 bg-bg-primary">
+      <div className="container mx-auto max-w-full">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-primary">
           About Me
         </h2>
@@ -13,8 +13,8 @@ export function About() {
           <div className="flex justify-center">
             <div className="relative w-52 h-52 md:w-80 md:h-80 min-w-[200px] min-h-[200px] rounded-full overflow-hidden border-4 border-primary">
               <img
-                style={{"rotate":"5deg"}}
-                src={profileImage}
+                style={{ "rotate": "5deg" }}
+                src={profileImage || "/placeholder.svg"}
                 alt="Profile"
                 width={320}
                 height={320}

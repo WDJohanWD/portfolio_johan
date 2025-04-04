@@ -9,8 +9,8 @@ import { Projects } from './sections/Projects'
 import { Project } from './sections/Project'
 function Layout() {
   return (
-    <>
-      <div id='hero' className=''>
+    
+      <div id='hero' className='overflow-x-hidden w-full max-w-full'>
         <Header />
         <Routes>
           <Route path="/portfolio_johan/" element={
@@ -25,7 +25,6 @@ function Layout() {
         </Routes>
         <Footer />
       </div>
-    </>
   )
 }
 

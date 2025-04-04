@@ -4,7 +4,7 @@ import { Code, Database, Server, Wrench, Rocket, Layout } from "lucide-react";
 
 export function Skills() {
     return (
-        <section id="skills" className="py-16 md:py-24 mb-20 px-10">
+        <section id="skills" className="py-16 md:py-24 mb-20 px-10 mx-auto max-w-full">
             <div className="container">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-secondary">
                     Skills

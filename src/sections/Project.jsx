@@ -16,11 +16,20 @@ export function Project() {
             "/portfolio_johan/culturefit/culturefit2.webp",
             "/portfolio_johan/culturefit/culturefit3.webp"
         ],
-        "smartsphere":[
+        "smartsphere": [
             "/portfolio_johan/smartsphere/smartsphere.webp",
             "/portfolio_johan/smartsphere/smartsphere1.webp",
             "/portfolio_johan/smartsphere/smartsphere2.webp",
             "/portfolio_johan/smartsphere/smartsphere3.webp"
+        ],
+        "trivial": [
+            "/portfolio_johan/trivial/Trivial.webp"
+        ],
+        "shop":[
+            "/portfolio_johan/shop/Shop.webp"
+        ],
+        "dao":[
+            "/portfolio_johan/dao/DAO.webp"
         ]
     };
 
@@ -51,7 +60,7 @@ export function Project() {
                     liveUrl=""
                     repoUrl="https://github.com/WDJohanWD/proyectoreact"
                     date="2025-23-02"
-                    role="Full-Stack Developer"
+                    role="Frontent Developer"
                     technologies={["React", "Tailwind CSS"]}
                     longDescription="This application was developed by Johan Fernando Aponte Valencia. It is an online store specializing in technology products, offering a complete shopping experience. The platform includes essential e-commerce functionalities such as product listing, shopping cart, secure checkout, and an admin dashboard for managing users and products. The application is built with React and Tailwind CSS and continues to be actively developed."
                     features={["User authentication", "Product listing", "Cart functionality", "Secure checkout", "Admin dashboard"]}
@@ -59,6 +68,55 @@ export function Project() {
                     solutions="Implemented JSON-SERVER to persist cart data and developed a stock control system that locks items in the cart until checkout is completed."
                 />
             )}
+            {id === "TRIVIAL" && (
+                <ProjectDetails
+                    title="Trivia Culture Game"
+                    description="A Python terminal-based trivia game with questions and answers, utilizing OOP concepts and JSON for data storage."
+                    images={images["trivial"]}
+                    liveUrl=""
+                    repoUrl="https://github.com/WDJohanWD/proyecto_poo"
+                    date="2025-23-02"
+                    role="Backend Developer"
+                    technologies={["Python", "JSON"]}
+                    longDescription="This project is a terminal-based trivia game developed in Python. It leverages Object-Oriented Programming (OOP) principles to manage game logic and uses JSON to store and retrieve questions and answers. The game provides an engaging way to test cultural knowledge with a variety of questions."
+                    features={["Question and answer functionality", "Score tracking", "JSON-based question storage", "OOP design for scalability"]}
+                    challenges="Designing a flexible question storage system and ensuring smooth user interaction in a terminal-based environment."
+                    solutions="Implemented a JSON-based storage system for easy question management and used Python's OOP features to create a modular and maintainable codebase."
+                />
+            )}
+            {id === "VUE" && (
+                <ProjectDetails
+                    title="Shop - Task Manager"
+                    description="A task manager with user authentication, task creation, cart, and more."
+                    images={images["shop"]}
+                    liveUrl=""
+                    repoUrl="https://github.com/WDJohanWD/vue_project"
+                    date="2025-23-02"
+                    role="Full Stack Developer"
+                    technologies={["Vue.js", "Express", "Pinia", "MongoDB", "Bootstrap"]}
+                    longDescription="This project is a task manager application developed using Vue.js for the frontend and Express for the backend. It includes features such as user authentication, task creation, and a shopping cart. MongoDB is used for data storage, and Bootstrap is used for styling. The application demonstrates a full-stack implementation with a focus on usability and scalability."
+                    features={["User authentication", "Task creation and management", "Shopping cart functionality", "Responsive design"]}
+                    challenges="Integrating state management with Pinia and ensuring seamless communication between the frontend and backend."
+                    solutions="Used Pinia for efficient state management and implemented RESTful APIs with Express to handle backend operations."
+                />
+            )}
+            {id === "DAO" && (
+                <ProjectDetails
+                    title="Hogwarts - BD Access"
+                    description="A small project to access a database with students and houses of Hogwarts."
+                    images={images["dao"]}
+                    liveUrl=""
+                    repoUrl="https://github.com/WDJohanWD/Hogwarts"
+                    date="2025-23-02"
+                    role="Backend Developer"
+                    technologies={["Java", "MySQL"]}
+                    longDescription="This project is a database access application developed in Java. It allows users to interact with a database containing information about students and houses from the Harry Potter universe. The project demonstrates the use of Java for backend development and MySQL for database management."
+                    features={["Database access", "CRUD operations", "Student and house management"]}
+                    challenges="Designing an efficient database schema and ensuring seamless interaction between the Java application and the MySQL database."
+                    solutions="Implemented a normalized database schema and used JDBC for smooth communication between the application and the database."
+                />
+            )}
+
         </div>
     );
 }

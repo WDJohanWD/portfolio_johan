@@ -18,7 +18,6 @@ i18n
             loadPath: "/portfolio_johan/translations/{{lng}}/{{ns}}.json",
         },
         ns: ["home", "projects", "hero", "skills", "contact", "footer"],
-        defaultNS: "home",
         react: {
              useSuspense: true
         }

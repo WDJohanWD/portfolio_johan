@@ -16,10 +16,10 @@ i18n
         backend: {
             loadPath: "/portfolio_johan/translations/{{lng}}/{{ns}}.json",
         },
-        ns: ["home", "projects", "hero", "skills", "contact", "footer", /* agrega otros namespaces */],
+        ns: ["home", "projects", "hero", "skills", "contact", "footer"],
         defaultNS: "home",
         react: {
-             useSuspense: true // Asegúrate de que useSuspense esté en true (es el valor por defecto)
+             useSuspense: true
         }
     });
 

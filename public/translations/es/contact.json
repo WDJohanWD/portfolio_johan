@@ -1,0 +1,9 @@
+{
+    "title": "Contáctame",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "message": "Mensaje",
+    "button": "Enviar mensaje",
+    "success": "¡Gracias por tu mensaje! Me pondré en contacto contigo pronto.",
+    "sending": "Enviando..."
+}

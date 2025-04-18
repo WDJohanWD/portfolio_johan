@@ -8,6 +8,7 @@ import { About } from './sections/About';
 import { Skills } from './sections/Skills';
 import { Projects } from './sections/Projects';
 import { Project } from './sections/Project';
+import { ContactSection } from './sections/Contact';
 
 function Layout() {
   return (
@@ -22,6 +23,7 @@ function Layout() {
               <About />
               <Skills />
               <Projects/>
+              <ContactSection />
             </>
           } />
           

@@ -1,0 +1,9 @@
+{
+    "title": "Contact me",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "button": "Send message",
+    "success": "Thank you for your message! I will contact you soon.",
+    "sending": "Sending..."
+}

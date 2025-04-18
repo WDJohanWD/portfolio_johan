@@ -1,43 +1,46 @@
 import React from "react";
 import { Card, CardContent } from "../components/Card";
 import { Code, Database, Server, Wrench, Rocket, Layout } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export function Skills() {
+    
+    const { t } = useTranslation("skills")
     return (
         <section id="skills" className="py-16 md:py-24 mb-20 px-10 mx-auto max-w-full">
             <div className="container">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-secondary">
-                    Skills
+                    {t("title")}
                 </h2>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-y-8">
                     <SkillCard
                         icon={<Layout className="h-10 w-10 text-primary" />}
-                        title="Frontend Development"
+                        title={t("frontend")}
                         skills={["React", "Vue.js", "Tailwind CSS", "Bootstrap"]}
                     />
                     <SkillCard
                         icon={<Server className="h-10 w-10 text-primary" />}
-                        title="Backend Development"
+                        title={t("backend")}
                         skills={["Spring Boot", "REST APIs"]}
                     />
                     <SkillCard
                         icon={<Database className="h-10 w-10 text-primary" />}
-                        title="Databases"
+                        title={t("database")}
                         skills={["MySQL", "MongoDB"]}
                     />
                     <SkillCard
                         icon={<Code className="h-10 w-10 text-primary" />}
-                        title="Languages"
+                        title={t("languages")}
                         skills={["JavaScript", "Python", "Java"]}
                     />
                     <SkillCard
                         icon={<Wrench className="h-10 w-10 text-primary" />}
-                        title="DevOps & Tools"
+                        title={t("deploymentTools")}
                         skills={["Docker", "NGINX", "Apache", "XAMPP"]}
                     />
                     <SkillCard
                         icon={<Rocket className="h-10 w-10 text-primary" />}
-                        title="Other Technologies"
+                        title={t("other")}
                         skills={["Git", "Postman", "Swagger", "Notion"]}
                     />
                 </div>

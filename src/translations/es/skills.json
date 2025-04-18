@@ -1,0 +1,9 @@
+{
+    "title": "Conocimientos",
+    "frontend": "Desarrollo Frontend",
+    "backend": "Desarrollo Backend",
+    "database": "Bases de datos",
+    "languages": "Lenguajes de programación",
+    "deploymentTools": "Herramientas de despliegue",
+    "other": "Otras tecnologías"
+}

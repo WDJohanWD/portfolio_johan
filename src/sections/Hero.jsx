@@ -1,7 +1,13 @@
 import { Button } from "../components/Button";
 import { Github, Linkedin, Mail } from "lucide-react";
 import ScrollDown from "../components/ScrollDownArrow";
+import { useTranslation } from "react-i18next";
+import { useState } from "react";
+
+
 export function Hero() {
+
+
   return (
     <section className="min-h-screen flex flex-col justify-center items-center text-center py-24">
       <div className="container mx-auto max-w-full px-4">
@@ -47,7 +53,7 @@ export function Hero() {
             </Button>
           </a>
         </div>
-        <ScrollDown targetId="about" />
+        <ScrollDown className="hidden md:block" targetId="about" />
 
       </div>
     </section>

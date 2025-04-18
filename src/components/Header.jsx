@@ -27,7 +27,7 @@ export function Header() {
 
   const handleNavigation = (sectionId) => {
     if (location.pathname !== "/") {
-      navigate("/portfolio_johan/", { replace: true }); 
+      navigate("/portfolio_johan/", { replace: true });
       setTimeout(() => {
         document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
       }, 300);
@@ -38,8 +38,8 @@ export function Header() {
 
 
 
-  const currentLanguage = LANGUAGES.find(lang => lang.code === lng);
-  
+  const normalizedLang = lng?.split("-")[0];
+  const currentLanguage = LANGUAGES.find(lang => lang.code === normalizedLang) || LANGUAGES[0];
   return (
     <header className="sticky top-0 z-50 max-w-full mx-auto">
       <div className="absolute inset-0 border-b border-secondary bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/60"></div>

@@ -10,6 +10,7 @@ i18n
     .init({
         debug: true,
         fallbackLng: 'en',
+        load: "languageOnly",
         interpolation: {
             escapeValue: false,
         },

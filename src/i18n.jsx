@@ -14,9 +14,13 @@ i18n
             escapeValue: false,
         },
         backend: {
-            loadPath: "src/translations/{{lng}}/{{ns}}.json",
+            loadPath: "/portfolio_johan/translations/{{lng}}/{{ns}}.json",
         },
+        ns: ["home", "projects", "hero", "skills", "contact", "footer", /* agrega otros namespaces */],
         defaultNS: "home",
+        react: {
+             useSuspense: true // Asegúrate de que useSuspense esté en true (es el valor por defecto)
+        }
     });
 
 export default i18n

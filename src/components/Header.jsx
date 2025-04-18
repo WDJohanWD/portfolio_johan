@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react"
 import { Button } from "./Button"
 import { useTranslation } from "react-i18next";
@@ -11,6 +11,9 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false)
   const { i18n, t } = useTranslation("navbar");
+  const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const [lng, setLng] = useState(i18n.language);
 
@@ -20,6 +23,21 @@ export function Header() {
     setIsLangMenuOpen(false);
   };
 
+
+
+  const handleNavigation = (sectionId) => {
+    if (location.pathname !== "/") {
+      navigate("/portfolio_johan/", { replace: true }); 
+      setTimeout(() => {
+        document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+      }, 300);
+    } else {
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+
+
   const currentLanguage = LANGUAGES.find(lang => lang.code === lng);
   
   return (
@@ -28,24 +46,24 @@ export function Header() {
 
       <div className="relative container flex h-16 items-center justify-between px-3 text-secondary">
         <div className="flex items-center gap-2">
-          <Link to="/portfolio_johan" className="font-bold text-xl text-secondary transition-colors">
+          <Link to="/portfolio_johan/" className="font-bold text-xl text-secondary transition-colors">
             Johan Aponte
           </Link>
         </div>
 
         <nav className="hidden md:flex gap-6">
-          <a href="#about" className="text-sm font-medium text-primary transition-colors">
+          <button onClick={() => handleNavigation("about")} className="text-sm font-medium text-primary transition-colors">
             {t("About")}
-          </a>
-          <a href="#skills" className="text-sm font-medium text-primary transition-colors">
+          </button>
+          <button onClick={() => handleNavigation("skills")} className="text-sm font-medium text-primary transition-colors">
             {t("Skills")}
-          </a>
-          <a href="#projects" className="text-sm font-medium text-primary transition-colors">
+          </button>
+          <button onClick={() => handleNavigation("projects")} className="text-sm font-medium text-primary transition-colors">
             {t("Projects")}
-          </a>
-          <a href="#contact" className="text-sm font-medium text-primary transition-colors">
+          </button>
+          <button onClick={() => handleNavigation("contact")} className="text-sm font-medium text-primary transition-colors">
             {t("Contact")}
-          </a>
+          </button>
           <div className="relative">
             <button
               onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}

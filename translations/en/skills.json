@@ -1,0 +1,9 @@
+{
+    "title": "Skills",
+    "frontend": "Frontend development",
+    "backend": "Backend development",
+    "database": "Databases",
+    "languages": "Programming languages",
+    "deploymentTools": "Deployment tools",
+    "other": "Other technologies"
+}

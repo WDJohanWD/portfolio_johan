@@ -17,7 +17,7 @@ i18n
         backend: {
             loadPath: "/portfolio_johan/translations/{{lng}}/{{ns}}.json",
         },
-        ns: ["home", "projects", "hero", "skills", "contact", "footer"],
+        ns: [ "projects", "hero", "skills", "contact", "footer"],
         react: {
              useSuspense: true
         }

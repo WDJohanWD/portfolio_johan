@@ -2,32 +2,32 @@ import { Button } from "../components/Button";
 import { Github, Linkedin, Mail } from "lucide-react";
 import ScrollDown from "../components/ScrollDownArrow";
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
 
 
 export function Hero() {
 
-
+  const { t } = useTranslation("hero");
   return (
     <section className="min-h-screen flex flex-col justify-center items-center text-center py-24">
+      
       <div className="container mx-auto max-w-full px-4">
         <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
-          <span className="block text-secondary italic">Hi, I'm </span>
-          <span className="block text-primary">Johan Aponte</span>
+          <span className="block text-secondary italic">{t("title")} </span>
+          <span className="block text-primary">{t("name")}</span>
         </h1>
         <p className="mt-6 max-w-[42rem] text-muted-foreground text-xl mx-auto " style={{ "textShadow": 'var(--text-shadow)' }}>
-          Developer with experience in frontend and backend, crafting exceptional digital experiences.        </p>
+          {t("description")}</p>
 
         {/* Botones principales */}
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <a href="#projects" className="flex items-center">
             <Button className="bg-secondary/80 text-bg-primary">
-              My Work
+              {t("button1")}
             </Button>
           </a>
           <a href="#contact">
             <Button variant="outline" className="bg-secondary/80 text-bg-primary">
-              Contact Me
+            {t("button2")}
             </Button>
           </a>
         </div>

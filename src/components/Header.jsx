@@ -5,18 +5,22 @@ import { Button } from "./Button"
 import { useTranslation } from "react-i18next";
 import { LANGUAGES } from "../translations/index";
 import { LuChevronDown } from "react-icons/lu";
+import Flag from "react-world-flags";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isLangMenuOpen, setIsLangMenuOpen] = useState(false)
   const { i18n, t } = useTranslation("navbar");
 
   const [lng, setLng] = useState(i18n.language);
 
-  const onChangeLang = (e) => {
-    const lang_code = e.target.value;
-    i18n.changeLanguage(lang_code);
-    setLng(lang_code);
+  const onChangeLang = (code) => {
+    i18n.changeLanguage(code);
+    setLng(code);
+    setIsLangMenuOpen(false);
   };
+
+  const currentLanguage = LANGUAGES.find(lang => lang.code === lng);
   
   return (
     <header className="sticky top-0 z-50 max-w-full mx-auto">
@@ -42,23 +46,28 @@ export function Header() {
           <a href="#contact" className="text-sm font-medium text-primary transition-colors">
             {t("Contact")}
           </a>
-          <div className="flex items-center align-middle justify-center text-primary">
-              <label htmlFor="language"></label>
-              <select
-                id="language"
-                value={lng}
-                onChange={onChangeLang}
-                style={{ cursor: "pointer", appearance: "none" }}
-                className="ms-4 pe-4"
-              >
+          <div className="relative">
+            <button
+              onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
+              className="flex items-center gap-2 p-1 rounded-md hover:bg-secondary/10"
+            >
+              <Flag code={currentLanguage.label} style={{ width: "20px", height: "15px" }} />
+              <LuChevronDown className="w-4 h-4" />
+            </button>
+            {isLangMenuOpen && (
+              <div className="absolute right-0 w-20 mt-2 bg-background border border-secondary rounded-md shadow-lg">
                 {LANGUAGES.map(({ code, label }) => (
-                  <option key={code} value={code} className="text-secondary">
-                    {label}
-                  </option>
+                  <button
+                    key={code}
+                    onClick={() => onChangeLang(code)}
+                    className="w-full p-1 flex items-center justify-center hover:bg-secondary/10"
+                  >
+                    <Flag code={label} style={{ width: "20px", height: "15px" }} />
+                  </button>
                 ))}
-              </select>
-              <LuChevronDown className="-ms-4" />
-            </div>
+              </div>
+            )}
+          </div>
         </nav>
 
         <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -74,48 +83,42 @@ export function Header() {
           <nav className="relative container flex flex-col py-4 px-3 text-secondary">
             <a
               href="#about"
-              className="py-2 text-sm font-medium  transition-colors"
+              className="py-2 text-sm font-medium transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               {t("About")}
             </a>
             <a
               href="#skills"
-              className="py-2 text-sm font-medium  transition-colors"
+              className="py-2 text-sm font-medium transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               {t("Skills")}
             </a>
             <a
               href="#projects"
-              className="py-2 text-sm font-medium  transition-colors"
+              className="py-2 text-sm font-medium transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               {t("Projects")}
             </a>
             <a
               href="#contact"
-              className="py-2 text-sm font-medium  transition-colors"
+              className="py-2 text-sm font-medium transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               {t("Contact")}
             </a>
-            <div className="flex items-center">
-              <label htmlFor="language"></label>
-              <select
-                id="language"
-                defaultValue={lng}
-                onChange={onChangeLang}
-                style={{ cursor: "pointer", appearance: "none" }}
-                className="ms-4 pe-4"
-              >
-                {LANGUAGES.map(({ code, label }) => (
-                  <option key={code} value={code} className="text-black">
-                    {label}
-                  </option>
-                ))}
-              </select>
-              <LuChevronDown className="-ms-4" />
+            <div className="flex items-center gap-2 py-2">
+              {LANGUAGES.map(({ code, label }) => (
+                <button
+                  key={code}
+                  onClick={() => onChangeLang(code)}
+                  className={`p-2 rounded-md ${lng === code ? 'bg-secondary/10' : 'hover:bg-secondary/10'}`}
+                >
+                  <Flag code={label} style={{ width: "20px", height: "15px" }} />
+                </button>
+              ))}
             </div>
           </nav>
         </div>

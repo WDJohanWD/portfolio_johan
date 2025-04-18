@@ -49,7 +49,7 @@ export function ContactSection() {
     };
 
     return (
-        <section className="py-12 px-4 max-w-3xl mx-auto">
+        <section id="contact" className="py-12 px-4 max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12 text-secondary">{t("title")}</h2>
 
             {isSubmitted && (
@@ -76,11 +76,12 @@ export function ContactSection() {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary relative bg-transparent"
+                        
                         style={{
                             border: '2px solid transparent',
                             background: 'linear-gradient(white, white) padding-box, linear-gradient(to right, var(--color-secondary), var(--color-bg-primary)) border-box'
                         }}
+                        className="w-full px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary relative bg-bg-primary"
                     />
                 </div>
 

@@ -99,34 +99,42 @@ export function Header() {
           <div className="absolute inset-0 border-b border-secondary bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/60"></div>
 
           <nav className="relative container flex flex-col py-4 px-3 text-secondary">
-            <a
-              href="#about"
+            <button
+              onClick={() => {
+                handleNavigation("about");
+                setIsMenuOpen(false);
+              }}
               className="py-2 text-sm font-medium transition-colors"
-              onClick={() => setIsMenuOpen(false)}
             >
               {t("About")}
-            </a>
-            <a
-              href="#skills"
+            </button>
+            <button
+              onClick={() => {
+                handleNavigation("skills");
+                setIsMenuOpen(false);
+              }}
               className="py-2 text-sm font-medium transition-colors"
-              onClick={() => setIsMenuOpen(false)}
             >
               {t("Skills")}
-            </a>
-            <a
-              href="#projects"
+            </button>
+            <button
+              onClick={() => {
+                handleNavigation("projects");
+                setIsMenuOpen(false);
+              }}
               className="py-2 text-sm font-medium transition-colors"
-              onClick={() => setIsMenuOpen(false)}
             >
               {t("Projects")}
-            </a>
-            <a
-              href="#contact"
+            </button>
+            <button
+              onClick={() => {
+                handleNavigation("contact");
+                setIsMenuOpen(false);
+              }}
               className="py-2 text-sm font-medium transition-colors"
-              onClick={() => setIsMenuOpen(false)}
             >
               {t("Contact")}
-            </a>
+            </button>
             <div className="flex items-center gap-2 py-2">
               {LANGUAGES.map(({ code, label }) => (
                 <button

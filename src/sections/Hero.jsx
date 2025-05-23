@@ -1,5 +1,5 @@
 import { Button } from "../components/Button";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, FileUser } from "lucide-react";
 import ScrollDown from "../components/ScrollDownArrow";
 import { useTranslation } from "react-i18next";
 
@@ -50,6 +50,12 @@ export function Hero() {
             <Button variant="ghost" className="bg-bg-primary" size="icon">
               <Mail className="h-5 w-5 text-secondary" />
               <span className="sr-only">Email</span>
+            </Button>
+          </a>
+          <a href="cv.pdf" download={true}>
+            <Button variant="ghost" className="bg-bg-primary" size="icon">
+              <FileUser className="h-5 w-5 text-secondary" />
+              <span className="sr-only">CV</span>
             </Button>
           </a>
         </div>

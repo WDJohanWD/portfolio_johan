@@ -9,40 +9,48 @@ import { Skills } from './sections/Skills';
 import { Projects } from './sections/Projects';
 import { Project } from './sections/Project';
 import { ContactSection } from './sections/Contact';
+import ReactGA from 'react-ga4';
+import { useEffect } from 'react';
 
 function Layout() {
   return (
-    
+
     <>
       <div id='hero' className='overflow-x-hidden w-full max-w-full'>
         <Header />
         <Routes>
           <Route path="/portfolio_johan/" element={
-            <> 
+            <>
               <Hero />
               <About />
               <Skills />
-              <Projects/>
+              <Projects />
               <ContactSection />
             </>
           } />
-          
+
           <Route
             path="/portfolio_johan/project/:id"
             element={
               <Suspense fallback={<div>Cargando detalles del proyecto...</div>}>
-                <Project/>
+                <Project />
               </Suspense>
             }
           />
         </Routes>
         <Footer />
       </div>
-    </> 
+    </>
   );
 }
 
 function App() {
+  ReactGA.initialize(import.meta.env.VITE_GOOGLE_ANALYTICS_ID)
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: window.location.pathname, title: "Johan Aponte" });
+
+  }, [])
+
   return (
     <BrowserRouter>
       <Layout />
